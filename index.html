@@ -6,8 +6,6 @@
     <title>Expense Tracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    
-    </style>
 </head>
 <body>
     <div class="container">
@@ -15,6 +13,8 @@
         <div class="balance">
             <p>Your Balance</p>
             <span>$0.00</span>
+            <input type="number" id="totalBalance" placeholder="Enter Total Balance" >
+            <button type="button" id="updateBalance" >Update Balance</button>
         </div>
         <div class="income-expense">
             <div class="income">
@@ -26,13 +26,13 @@
                 <span>$0.00</span>
             </div>
         </div>
-        <ul>
+        <ul class="list">
             <li>Sample Transaction <span>$0.00</span></li>
         </ul>
-        <form>
-            <input type="text" placeholder="Enter description">
-            <input type="number" placeholder="Enter amount">
-            <button type="button">Add Transaction</button>
+        <form class="forms">
+            <input type="text" id="expencename" placeholder="Enter description">
+            <input type="number" id="expenceamount" placeholder="Enter amount">
+            <button type="submit" id="button">Add Transaction</button>
         </form>
     </div>
     <script src="scripts.js"></script>

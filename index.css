@@ -1,36 +1,91 @@
+/* Styling for the body to create a centered, dark-themed layout */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1e1e2d;
+    background-color: #1e1e2d; /* Dark background for contrast */
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #f4f4f9;
+    color: #f4f4f9; /* Light text for readability */
 }
+
+/* Main container styling */
 .container {
     background-color: #2a2a40;
-    width: 420px;
+    width: 400px;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
+
+/* Header styling */
 h2 {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: center;
     color: #f4f4f9;
-    font-size: 28px;
+    font-size: 26px;
 }
+
+/* Balance section styling */
 .balance {
     margin-bottom: 20px;
     text-align: center;
-}
-.balance span {
-    font-size: 32px;
     font-weight: bold;
-    color: #4caf50;
 }
+
+.balance span {
+    display: block;
+    font-size: 30px;
+    color: #4caf50;
+    margin-top: 5px;
+}
+
+/* Updated Your Balance and Add Balance styling */
+.balance-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-balance {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#totalBalance {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #3b3b5c;
+    color: #f4f4f9;
+    border: none;
+    outline: none;
+    width: 50%;
+    margin: 20px;
+    text-align: center;
+}
+
+#updateBalance {
+    padding: 8px 12px;
+    width: 50%;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#updateBalance:hover {
+    background-color: #43a047;
+}
+
+/* Income and expense summary */
 .income-expense {
     display: flex;
     justify-content: space-between;
@@ -39,44 +94,53 @@ h2 {
     padding: 15px;
     border-radius: 10px;
 }
-.income {
+
+.income, .expense {
     width: 48%;
     text-align: center;
-    color:rgb(249, 245, 244);
+    color: #f4f4f9;
+    font-weight: bold;
 }
 
-.expense{
-    width: 48%;
-    text-align: center;
-    color:rgb(216, 83, 83);
+.income span {
+    color: #4caf50;
 }
-ul {
+
+.expense span {
+    color: #e53935;
+}
+
+/* Transaction list styling */
+ul.list {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
-    max-height: 200px;
+    max-height: 150px;
     overflow-y: auto;
 }
-ul li {
+
+ul.list li {
     background-color: #3b3b5c;
     padding: 12px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     color: #f4f4f9;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-form {
+
+/* Styling the form */
+.forms {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 15px;
     justify-content: space-between;
 }
-form input {
-    width: calc(50% - 10px);
-    width: 100%;
+
+.forms input {
+    width: calc(100% - 10px);
     padding: 10px;
     border: none;
     border-radius: 8px;
@@ -85,7 +149,8 @@ form input {
     margin-bottom: 10px;
     outline: none;
 }
-form button {
+
+#button {
     width: 100%;
     padding: 10px;
     background-color: #4caf50;
@@ -97,6 +162,7 @@ form button {
     transition: background-color 0.3s ease;
     margin-top: 5px;
 }
-form button:hover {
+
+#button:hover {
     background-color: #43a047;
 }
